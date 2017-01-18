@@ -1,22 +1,75 @@
-<%= form_for(@recommendation) do |f| %>
-  <% if @recommendation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@recommendation.errors.count, "error") %> prohibited this recommendation from being saved:</h2>
+<div class='container recommendation-page'>
 
-      <ul>
-      <% @recommendation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <div class='row justify-content-center'>
+    <div class='col-md-8'>
+      <div class='heading'>
+        <h1> Give 100, Get £100!</h1>
+        <h4>Recommend Third Space to other schools and for each school that signs up you each get £100 off your next purchase</h4>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :recipient_email %><br>
-    <%= f.text_field :recipient_email %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-sm-7 col-8 step">
+      <div class="step-image">
+        <%= image_tag("image-a", :alt => "Image A") %>
+      </div>
+      <p class="step-text">
+        Recommend us to another school
+      </p>
+    </div>
+    <div class="col-md-4 col-sm-7 col-8 step">
+      <div class="step-image">
+        <%= image_tag("image-a", :alt => "Image A") %>
+      </div>
+      <p class="step-text">
+        The school signs up for next term
+      </p>
+    </div>
+    <div class="col-md-4 col-sm-7 col-8 step">
+      <div class="step-image">
+        <%= image_tag("image-a", :alt => "Image A") %>
+      </div>
+      <p class="step-text">
+        You both get £100
+      </p>
+    </div>
   </div>
-<% end %>
+
+  <div class="row">
+    <div class="col-6">
+      <div class='recommendation-form'>
+        <h4 class='recommendation-form-title'>
+          Forward your unique school code to other schools:
+        </h4>
+        <input></input>
+        <input type='submit'></input>
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class='recommendation-form'>
+        <h4 class='recommendation-form-title'>
+          Use our template to send lots of recommendations quickly:
+        </h4>
+
+        <%= form_for(@recommendation) do |f| %>
+          <% if @recommendation.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@recommendation.errors.count, "error") %> prohibited this recommendation from being saved:</h2>
+
+              <ul>
+                <% @recommendation.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <%= f.text_field :recipient_email %>
+          <%= f.submit 'Send email' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

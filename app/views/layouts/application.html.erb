@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+
+      <%= render 'layouts/header' %>
+      <div class='site-container container'>
+
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer' %>
+
   </body>
 </html>

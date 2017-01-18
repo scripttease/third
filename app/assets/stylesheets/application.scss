@@ -13,3 +13,39 @@
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+$blue: #398CDA;
+$light-blue: lightcyan;
+$black: #363636;
+$dark-grey: #363636;
+$light-grey: #F3F3F3;
+$white: white;
+$orange: orange;
+
+
+@import "recommendation-new";
+
+body {
+  background-color: $light-blue;
+  font-family: helvetica;
+}
+
+.site-container {
+  width: 95%;
+}
+
+.footer {
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 20px;
+
+  a {
+    color: $white;
+  }
+
+  a:hover { 
+    color: $white;
+  }
+}

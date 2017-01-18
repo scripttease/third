@@ -1,0 +1,63 @@
+.recommendation-page {
+  background-color: $white;
+}
+
+.heading {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.heading h1 {
+  font-style: 40px;
+  font-weight: bold;
+  color: $blue;
+}
+
+.heading h4 {
+  font-size: 22px;
+  color: $dark-grey;
+  line-height: 1.3em;
+}
+
+.step-image img {
+  background-color: $light-grey;
+  max-width: 100%;
+}
+
+.step-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 1em 0.3em;
+  line-height: 1.2em;
+}
+
+.recommendation-form {
+  background-color: $blue;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.recommendation-form-title {
+  color: $white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.recommendation-form input {
+  margin: 12px 0;
+  width: 100%;
+  padding: 10px 8px;
+}
+
+.recommendation-form input[type=submit] {
+  background-color: $orange;
+  color: $white;
+  border: 1px solid $white;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
